@@ -1,0 +1,99 @@
+/******************************************
+ * Michael Skaza
+ * mskaza@umass.edu
+ * January 4, 2017
+ *
+ * Project 1 -- Using Scanner Class
+ * 
+ * ****************************************/
+import java.util.Scanner;
+
+class Project1
+  
+{
+  public static void main (String args[])
+    
+  {
+    int num1; //Declaring integers for the user to input
+    int num2;
+    int num3;
+    int num4;
+    float answer;
+    
+   Scanner scan = new Scanner(System.in); // Calls the scanner class
+   System.out.println("Enter the first number:");
+   num1 = scan.nextInt(); 
+        
+   System.out.println("Enter the second number:");
+   num2 = scan.nextInt();
+   
+   System.out.println("Enter the third number:");
+   num3 = scan.nextInt();
+   
+   System.out.println("Enter the fourth number:");
+   num4 = scan.nextInt();
+   
+   //takes the above inputs and does the following operations
+   //intermediate values are stored as floats
+   answer = ((float)(num1+num4)/(num2))*num3;//promotion is used here
+   
+   System.out.println("(("+num1
+                        +"+" +num4
+                        +")/" +num2
+                        +")*" +num3 
+                        +" = "+answer);
+   
+   
+   //Start of project that converts sum of 3 doubles to an integer
+   double input1;
+   double input2;
+   double input3;
+   
+   System.out.println("Enter the first double:");
+   input1 = scan.nextDouble();
+   //first double is inputed
+   
+   System.out.println("Enter the second double:");
+   input2 = scan.nextDouble();
+   //second double is inputed
+   
+   System.out.println("Enter the third double:");
+   input3 = scan.nextDouble();
+   //third double is inputed
+   
+   
+   int sum;
+   sum = (int)(input1+input2+input3); //casting used to convert double to an int
+   System.out.println("The sum is "+sum);//prints out the answer as an intger
+    
+    
+   
+  //start of project that prints out the equivalent number 
+  //of quarts, pints, and liters
+    
+   final float LITERS = 3.785F;
+   final int QUARTS = 4;
+   final int PINTS = 2;
+   
+   float gallons, quarts, pints, liters;
+    
+   System.out.println("Enter the number of gallons:");
+   gallons = scan.nextFloat();
+   
+   quarts = gallons*QUARTS;
+   pints = gallons*(QUARTS*PINTS);
+   liters = gallons*LITERS;
+   // does the above operations to convert gallons to the specified unit
+   
+   //prints out all conversions
+   System.out.println("Number of quarts is: " +quarts);
+   
+   System.out.println("Number of pints is: " + pints);
+   
+   System.out.println("Number of liters is: " +liters);                             
+   
+   
+  }
+}
+  
+  
